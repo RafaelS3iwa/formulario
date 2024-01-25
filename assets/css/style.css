@@ -1,0 +1,34 @@
+:root{
+    --primaria: #FB81BE; 
+    --secundaria: #8553F4;
+    --texto: #fff;
+    --primaria2: #192442;
+    --secundaria2: #45D3A1; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#barra-topo{
+    position: fixed;
+    z-index: 999999;
+    background-color: var(--secundaria);
+    top: 0;
+    width: 100%;
+}
+
+#cabecalho{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secundaria);
+    align-items: center;
+    height: 110px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
