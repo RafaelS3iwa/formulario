@@ -1,4 +1,10 @@
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php" ?>
+<?php 
+require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/cabecalho.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/controllers/formulario.php"; 
+
+$formulario = new Formulario();
+$formulario->DadosFormulario();
+?>
 
 <main>
     <div class="container">
@@ -7,7 +13,7 @@
 
 
     <!-- Informações do Cliente -->
-    <form method="post" action="/controllers/formulario.php">
+    <form method="post" action="teste.php">
         <div class="formulario container">
             <h1>Informações Pessoais</h1>
             <div class="formLinha">
@@ -24,7 +30,7 @@
 
                     <div class="col">
                         <label for="genero" class="form-label">Gênero (opcional): </label>
-                        <input type="text" name="genero" id="genero" class="form-control" required>
+                        <input type="text" name="genero" id="genero" class="form-control">
                     </div>
 
                     <div class="col">
