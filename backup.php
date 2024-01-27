@@ -54,3 +54,6 @@
         </td>  
     </tr>
 </table>
+
+<!-- Para o formulário -->
+<p><strong>:</strong> <?= $dados[''] ?></p>
