@@ -1,40 +1,143 @@
-:root{
-    --primaria: #FB81BE; 
-    --secundaria: #8553F4;
+:root {
+    --primaria: #5B00FA;
+    --secundaria: #8653F4;
+    --terceira: #7330F2;
     --texto: #fff;
-    --primaria2: #192442;
-    --secundaria2: #45D3A1; 
+    --secundaria2: #662BD5;
+    --fundo: #310085;
+    --destaque: #04A2E0;
 }
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-#barra-topo{
+#myVideo {
     position: fixed;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: scaleX(1.5); 
+    -moz-transform: scaleY(3);
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.92;
+    filter: contrast(1.8);
+}
+
+#barra-topo {
+    position: relative;
     z-index: 999999;
-    background-color: var(--secundaria);
+    background-color: black;
     top: 0;
     width: 100%;
 }
 
-#cabecalho{
+#cabecalho {
     display: flex;
     justify-content: space-between;
-    background-color: var(--secundaria);
+    background-color: transparent;
     align-items: center;
     height: 110px;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
 
 }
 
-main{
-    padding-top: 120px;
+#checklist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
+#checklist .titulo {
+    text-align: center;
+    color: transparent;
+    text-transform: uppercase;
+    text-shadow: rgba(255,0,0,1) 0px 0px 95px;
+    -webkit-text-stroke: 3px #F0E400;
+    font-size: 70px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+#checklist label,
+p,
+td {
+    font-size: 18px;
+}
+
+.formulario {
+    position: relative;
+    background-color: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#checklist .formulario h1 {
+    font-weight: bold;
+    font-size: 50px;
+    color: black;
+    -webkit-text-stroke: 1px #F0E400;
+    text-decoration-line: underline;
+    text-decoration-style: "solid";
+    text-decoration-color: rgba(255,247,92,1);
+    text-decoration-thickness: 4px;
+}
+
+#checklist .formulario p, .form-label{
+    font-weight: bolder;
+    font-size: 20px;
+    color:#9DC6F2;
+    -webkit-text-stroke: 0.5px black;
+}
+
+.formulario h1,
+p,
+table {
+    margin-left: 10px;
+}
+
+.formulario p {
+    margin-top: 15px;
+    margin-bottom: 2px;
+}
+
+.formulario table {
+    border-spacing: 5px;
+}
+
+.formulario td {
+    padding: 1px;
+    font-size: 18px;
+    -webkit-text-stroke: 0.5px black;
+    color: var(--texto);
+}
+
+.formulario input {
+    position: relative;
+}
+
+.form-group {
+    margin: 0 10px;
+}
+
+.col {
+    margin: 0 10px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}

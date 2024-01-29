@@ -1,18 +1,14 @@
-const btnGerar = document.querySelector("#confirmar-pdf"); //Alterar nome do id do botão depois
+const btnGerar = document.querySelector("#confirmar-pdf");
 
-btnGerar.addEventListener("click", ()=>{
-
-    //Conteúdo PDF
-    const content = document.querySelector("#paginaPDF") //Pegar a informação na página onde o PDF vai estar escrito
-
-    //Configuração do arquivo final do PDF
-    const opcoes = {
-        margin: [10, 10, 10, 10], //margem
-        filename: "formulario.pdf", 
-        html2canvas: {scale:2}, //Fonte
-        jsPDF: {unit: "mm", format: "a4", orientation: "portrait"}, 
-    };
-
-    //Gerar e baixar o PDF
-    html2pdf().set(opcoes).from(content).save(); 
+btnGerar.addEventListener("click", () => {
+    setTimeout(() => {
+        const content = document.querySelector("#paginaPDF");
+        const opcoes = {
+            margin: [-100, 10, 85, 10],
+            filename: "formulario.pdf",
+            html2canvas: { scale: 1 },
+            jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+        };
+        html2pdf().set(opcoes).from(content).save();
+    }, 500); // Ajuste o tempo conforme necessário
 });
